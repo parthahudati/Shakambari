@@ -1,0 +1,7 @@
+{
+  "name": "shakambari",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
