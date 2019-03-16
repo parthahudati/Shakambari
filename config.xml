@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>shakambari</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="io.shakambari.starter" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Shakambari mata</name>
+    <description>Shakambari mata By.. shakambari pariwar</description>
+    <author email="hi@ionicframework" href="http://webcandypro.com/">webcandypro</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -21,12 +21,12 @@
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
-        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
-        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
-        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
-        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+        <icon density="ldpi" src="resources/icon.png" />
+        <icon density="mdpi" src="resources/icon.png" />
+        <icon density="hdpi" src="resources/icon.png" />
+        <icon density="xhdpi" src="resources/icon.png" />
+        <icon density="xxhdpi" src="resources/icon.png" />
+        <icon density="xxxhdpi" src="resources/icon.png" />
         <splash density="land-ldpi" src="resources/android/splash/drawable-land-ldpi-screen.png" />
         <splash density="land-mdpi" src="resources/android/splash/drawable-land-mdpi-screen.png" />
         <splash density="land-hdpi" src="resources/android/splash/drawable-land-hdpi-screen.png" />
@@ -77,9 +77,17 @@
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
-    <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <plugin name="cordova-plugin-advanced-http" spec="2.0.2" />
+    <plugin name="cordova-plugin-firebase" spec="2.0.5" />
+    <plugin name="cordova-plugin-file-transfer" spec="1.7.1" />
+    <plugin name="cordova-plugin-file" spec="6.0.1" />
+    <plugin name="cordova-plugin-android-permissions" spec="1.0.0" />
+    <plugin name="cordova-plugin-nativestorage" spec="2.3.2" />
+    <plugin name="cordova.plugins.diagnostic" spec="4.0.10" />
+    <plugin name="cordova-plugin-x-toast" spec="2.7.2" />
+    <engine name="android" spec="7.1.4" />
 </widget>

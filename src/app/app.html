@@ -1,1 +1,17 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu id="mymenu" [content]="mycontent">
+      
+      <ion-content style="margin-top:20px;">
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+          <ion-icon name="ios-arrow-dropright-circle" item-end></ion-icon>
+        </button>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="danger" (click)="logout()" menuClose>
+        <ion-title align="center" >Logout</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

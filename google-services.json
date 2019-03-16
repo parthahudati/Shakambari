@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "918946322168",
+    "firebase_url": "https://shakambarimata-5ad6c.firebaseio.com",
+    "project_id": "shakambarimata-5ad6c",
+    "storage_bucket": "shakambarimata-5ad6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918946322168:android:adced4551ff0c01a",
+        "android_client_info": {
+          "package_name": "io.shakambari.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918946322168-5f90fbbf6uqjsbf5a1giief9h14o62ct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2LDvWWRwZ8LBZqZX_2YaTTqaC8jR54Yg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

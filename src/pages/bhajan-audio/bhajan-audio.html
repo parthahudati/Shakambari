@@ -1,0 +1,37 @@
+<!--
+  Generated template for the BhajanAudioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Bhajan Audio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!-- padding style="background-image:url('assets/imgs/main_bg.jpg')" -->
+
+<ion-content style="background-image:url('assets/imgs/dharma_bg.jpg')">
+
+  <ion-list>
+    <button ion-item *ngFor="let item of albumList" class="myButton" (click)="openPage(item.album_id)">
+      {{ item.album_name }}
+      <ion-icon name="ios-arrow-dropright-circle" item-end></ion-icon>
+    </button>  
+  </ion-list>
+
+    <!-- <div *ngFor="let item of audiolist" padding>
+        <p style="color: white ; font-size: 16px;" align="center">Title : {{item.song_title}} </p>
+          <audio controls>
+              <source src="http://shakambarimata.com/uploads/audio/{{item.audio_file}}" type="audio/mp3">
+              
+            </audio>
+      </div> -->
+
+      <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+          SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+        </div>
+</ion-content>

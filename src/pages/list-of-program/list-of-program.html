@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ListOfProgramPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>List Of Program</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/dharma_bg.jpg')">
+
+  <ion-segment [(ngModel)]="program">
+    <ion-segment-button value="navaratri">
+      Navaratri
+    </ion-segment-button>
+    <ion-segment-button value="jayanti">
+      Jayanti Mela
+    </ion-segment-button>
+    <ion-segment-button value="bhog">
+      Bhog Timming
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="program">
+    <div padding *ngSwitchCase="'navaratri'">
+      The sacred festival of Sakrambhari Navaratri is mainly celebrated here twice in a year. Mata Shakambhari is considered to be the incarnation of Shaky (vegetables) and Goddess of flora and Mother Parvati (Mother Durga). This festival is celebrated for the nine days dedicated to the Shukla Paksha of Paush month, beginning from the Ashtami of Paush Purnima, on the occasion of Shakmabhari Jayanti. Since tears rolled out from the eyes of the goddess continuously for 9 days and nights the biggest worship practice is the celebration of Navratra Mahotasav, held in the months of Chaitra and Ashwin for nine days each. Two more Navratras are also celebrated but they are known as "Gupt Navratras."
+      
+    </div>
+  
+    <div padding *ngSwitchCase="'jayanti'">
+      The popularity of this temple has been increasing day by day and many devotees visit this temple for "Darshan". On the day of "Poush Purnima" a mela is organised at Shakambhari mata temple. Lakhs of people gathered in this mela. During this time the Rishis Munis, who came for Devi's Darshan, were welcomed and honored with vegetarian meals. Because of this the temple was named as Shakambari devi temple.
+     
+    </div>
+
+    <div padding *ngSwitchCase="'bhog'">
+      Sri Shakambhari Mata Temple provides full meals as "Bhoj" on free of cost to all devotees. Every day nearly thousands of devotees are availing the free Bhoj twice in a day (Morning & Evening). Morning - 8:30 AM Evening - 6:30 PM
+    </div>
+  </div>
+
+  <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+      SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+    </div>
+</ion-content>

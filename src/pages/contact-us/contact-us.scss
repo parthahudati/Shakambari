@@ -1,0 +1,40 @@
+page-contact-us {
+
+        ion-input{
+            border: 1px solid rgb(39, 37, 37) !important;
+        }
+        ion-item{
+            border: 0px solid transparent !important;
+            background:rgba(226, 225, 225, 0) !important;
+        }
+    
+        input-cover{
+            border-bottom: 0px !important;
+            
+            background-color: white !important;
+        }
+        ion-label{
+            margin-bottom: 5px !important;
+            color: black !important;
+        }
+    
+        .item.item-input {
+            background-color: white;
+        }
+        .input-md {
+            padding-left: 6px !important;
+            color: black;
+            background-color: white;
+        }
+     
+        .mybutton{
+            
+            align-content: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 94% !important;
+        }
+    
+    
+}

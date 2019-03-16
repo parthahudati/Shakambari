@@ -1,0 +1,42 @@
+<!--
+  Generated template for the TemplePhotoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Mataji Photo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/dharma_bg.jpg')">
+<!-- 
+    <ion-grid *ngIf="grid">
+      <ion-row *ngFor="let row of grid">
+        <ion-col width-50 *ngFor="let img of row" >
+          <img class="myimg" src="{{img}}" (click)="details(img)" [hidden]="!img">
+          <div *ngIf="!img"></div>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid> -->
+
+    <ion-grid *ngIf="images">
+      <ion-row *ngFor="let img of images">
+        <ion-col width-50  >
+          <img  src="http://shakambarimata.com/{{img.path}}/{{img.photo}}" (click)="details(img)" [hidden]="!img">
+         
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid> 
+
+
+    <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+        SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+      </div>
+</ion-content>

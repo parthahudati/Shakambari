@@ -1,0 +1,57 @@
+<!--
+  Generated template for the LocalTransportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Local Transport</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/dharma_bg.jpg')" >
+
+  <div >
+    <ion-segment [(ngModel)]="howToReach">
+      <ion-segment-button value="air">
+        By Air
+      </ion-segment-button>
+      <ion-segment-button value="train">
+        By Train
+      </ion-segment-button>
+      <ion-segment-button value="bus">
+        By Bus
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="howToReach">
+    <div *ngSwitchCase="'air'" padding>
+      Nearest Airport for reaching Sri Shakambhari Mata Mandir is Jaipur. Devotees can hire cab or take a direct bus for Sakarai where the temple is located. It is around 150 km from Jaipur .
+    </div>
+  
+    <div *ngSwitchCase="'train'" padding>
+      Nearest Railway Station is Jhunjhunu / Sikaar. Devotees can take train either upto Jhunjhunu or Jaipur, from one can reach either by bus or car.There are several direct buses available from Jaipur to Sakarai.
+    </div>
+
+    <div *ngSwitchCase="'bus'" padding>
+      <p>From Delhi - 267 Kms</p>
+      <p>From Pilani - 108 Kms</p>
+      <p>From Sri Salasarji - 104 Kms</p>
+      <p>From Chirawa - 95 Kms</p>
+      <p>From Sri Khatushyamji -	73 Kms</p>
+      <p>From Jhunjhunu - 65 Kms</p>
+      <p>From Sikar - 50 Kms</p>
+      <p>From Udaipurwati - 15 Kms</p>
+
+    </div>
+  </div>
+
+  <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+      SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+    </div>
+</ion-content>

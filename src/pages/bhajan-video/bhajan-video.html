@@ -1,0 +1,27 @@
+<!--
+  Generated template for the BhajanVideoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>Bhajan Video</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-image:url('assets/imgs/dharma_bg.jpg')">
+
+    <div  *ngFor="let vid of videoList" >
+      <iframe class="myvideo" [src]="sanitize(vid.youtube_video_id)">
+      </iframe>
+      <hr>
+    </div>
+
+    <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+        SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+      </div>
+</ion-content>

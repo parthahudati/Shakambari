@@ -1,0 +1,48 @@
+page-login {
+
+    ion-input{
+        border: 1px solid black !important;
+    }
+    ion-item{
+        border: 0px solid transparent !important;
+        background:rgb(226, 225, 225) !important;
+    }
+
+    input-cover{
+        border-bottom: 0px !important;
+        
+        background-color: white !important;
+    }
+    ion-label{
+        margin-bottom: 5px !important;
+        color: black !important;
+    }
+
+    .item.item-input {
+        background-color: white;
+    }
+    .input-md {
+        padding-left: 6px !important;
+        color: black;
+        background-color: white;
+    }
+
+    .toast-container{
+        > div{
+            background-color:#32db64!important;
+        }
+        color: red !important;
+        background-color: green !important;
+        margin: 10px !important;
+        text-align:center;
+        }
+ 
+    .mybutton{
+        
+        align-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 94% !important;
+    }
+}

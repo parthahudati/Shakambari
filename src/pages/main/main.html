@@ -1,0 +1,263 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="header">
+
+ 
+
+  <ion-toolbar color="header">
+        
+    <button ion-button left icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <!-- <button ion-button right icon-only menuToggle>
+      <ion-icon name="logo-facebook" color="facebook"></ion-icon>
+    </button>
+  
+    <button ion-button right icon-only  menuToggle>
+      <ion-icon name="logo-whatsapp" color="whatsapp"></ion-icon>
+    </button>
+  
+    <button ion-button right icon-only menuToggle >
+      <ion-icon name="logo-youtube" color="youtube"></ion-icon>
+    </button>
+   -->
+   <ion-buttons right> <!-- Here we use start -->
+    <button ion-button right icon-only  (click)="facebook()">
+        <ion-icon name="logo-facebook" color="facebook"></ion-icon>
+      </button>
+    
+      <button ion-button right icon-only (click)="whatsapp()" >
+        <ion-icon name="logo-whatsapp" color="whatsapp"></ion-icon>
+      </button>
+    
+      <button ion-button right icon-only (click)="youtube()" >
+        <ion-icon name="logo-youtube" ></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title  style="font-size:5px">SHAKAMBARI MATA</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/main_bg.jpg')" no-padding>
+
+
+  <ion-grid no-padding>
+    <ion-row no-padding class="align-items-center centerrow" justify-content-center align-items-center>
+      <ion-col no-padding  style="background-color:transparent ; color: white ; font-size: 16px" >
+        <div class="phoneImg" padding-top padding-bottom  (click)="whatsapp()">
+          <img src="assets/imgs/whatsapp-icon.png"  alt="phone" style="margin-right:10px">{{whatsapp_number}}
+        </div>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="myHeaderDiv"  no-padding>
+
+    <!-- <div *ngFor="let slider of sliderImages">
+      <img src="http://shakambarimata.com/{{slider.path}}/{{slider.unique_photo_id}}" alt="sliderImages">
+    </div> -->
+    
+    
+  <ion-slides *ngIf="sliderImages" pager autoplay="1000" loop="true" speed="1000" >
+    
+    <ion-slide *ngFor="let slider of sliderImages">
+
+      
+      <img src="http://shakambarimata.com/{{slider.path}}/{{slider.banner_image}}"  alt="sliderImages" (click)="detailsImage(slider.unique_photo_id)">
+      
+      <!-- <h2 class="slide-title" [innerHTML]="slide.event_date" ></h2>
+      <p [innerHTML]="slide.event_title" style="color:white"></p> -->
+    </ion-slide>
+
+  </ion-slides>
+
+<!-- 
+    <img src="assets/imgs/daily.jpg" class="topImage"> -->
+    <h3 align="center" style="color:white">Daily Darshan</h3>
+    
+
+    <div *ngFor="let event of dailyDarshan">
+      <img src="http://shakambarimata.com/{{event.path}}/{{event.photo}}" class="secondImage">
+
+    </div>
+  </div>
+  <p align="center" style="color: white ; font-size : 18px;">Upcoming Events</p>
+
+  <ion-slides *ngIf="events && events.length" pager autoplay="1300" loop="true" speed="1300" >
+    
+      <ion-slide *ngFor="let slide of events">
+
+        
+
+        
+        <h2 class="slide-title" [innerHTML]="slide.event_date" ></h2>
+        <p [innerHTML]="slide.event_title" style="color:white"></p>
+      </ion-slide>
+    <!--  <ion-slide>
+
+         <ion-toolbar>
+
+        </ion-toolbar>
+        
+        <img src="assets/imgs/food_image.jpeg" class="slide-image"/>
+        <h2 class="slide-title">Ready to Play?</h2>
+        <button ion-button large clear icon-end color="primary">
+          Continue
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide> -->
+    </ion-slides>
+
+    <div *ngFor="let eventPhoto of eventPhotoList" >
+      <img src="http://shakambarimata.com/{{eventPhoto.path}}/{{eventPhoto.photo}}" alt="Event Photo List">
+    </div>
+    <button ion-button align="center" full padding margin-bottom (click)="eventPhoto()">View All Events</button>
+        
+    <iframe margin-left margin-bottom src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fshakambarimandir%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1635115979893540" width="340" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    <img class="youtube" src="assets/imgs/youtube-logo.png" (click)="youtube()">
+
+  <ion-grid no-padding>
+    <ion-row no-padding>
+      <ion-col no-padding style="background-color:rgb(231, 90, 8)" (click)="dharmashala()">
+        <p class="centerText">Dharmashala</p>
+      </ion-col>
+      <ion-col no-padding style="background-color:rgb(88, 15, 15)" (click)="howToReach()">
+        <p class="centerText">How TO Reach</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding >
+      <ion-col style="background-color:rgb(88, 15, 15)" (click)="bhajanAudio()">
+        <p class="centerText">Bhajan Audio</p>
+      </ion-col>
+      <ion-col style="background-color:rgb(231, 90, 8)" (click)="bhajanVideo()">
+
+        <p class="centerText">Bhajan Video</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding >
+      <ion-col style="background-color:rgb(231, 90, 8)" (click)="mangalPath()">
+        <p class="centerText">Mangal Path</p>
+      </ion-col>
+
+      <ion-col style="background-color:rgb(88, 15, 15)" (click)="eventPhoto()">
+          <p class="centerText">Event Photo</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding >
+      <ion-col style="background-color:rgb(88, 15, 15)" (click)="uniquePhoto()">
+        <p class="centerText">Unique Photo</p>
+      </ion-col>
+
+      <ion-col style="background-color:rgb(231, 90, 8)" (click)="bhajanBook()">
+          <p class="centerText">Bhajan Book</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+ 
+  <!-- <ion-list>
+    <button ion-item *ngFor="let item of galleryPages" class="myButton" (click)="openPage(item)">
+      {{ item.title }}
+      <ion-icon name="ios-arrow-dropright-circle" item-end></ion-icon>
+    </button>  
+  </ion-list> -->
+  <div padding>
+
+  
+  <ion-list *ngFor="let item of audiolist">
+    <ion-item-group>
+      <ion-item-divider color="light">{{item.song_title}}
+        <!-- <ion-icon item-end name="md-download"></ion-icon> -->
+      </ion-item-divider>
+      <!-- <ion-item>{{item.singer_name}}</ion-item> -->
+      <ion-item>
+        <audio controls>
+          <source src="http://shakambarimata.com/uploads/audio/{{item.audio_file}}" type="audio/mp3">
+          
+        </audio>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+</div>
+
+ 
+
+<div  *ngFor="let vid of videoList">
+  <iframe class="myvideo" [src]="sanitize(vid.youtube_video_id)">
+  </iframe>
+
+</div>
+
+    <h4 style="color:rgb(0, 132, 255) ; padding-left: 10px"><u>CONTACT US</u></h4>
+    
+    <ion-grid no-padding>
+
+      <ion-row no-padding class="addressrow">
+        <ion-col no-padding class="addressrow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+              <ion-icon name="pin" margin-right></ion-icon>Address <br> {{address}}
+          </div>
+          
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row no-padding class="phonerow">
+        <ion-col no-padding class="phonerow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+            <img src="assets/imgs/phone-icon.png"  alt="phone" style="margin-right:10px">Phone Number <br>  {{phone_one}}
+          </div>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row no-padding class="phonerow">
+        <ion-col no-padding class="phonerow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+            <img src="assets/imgs/phone-icon.png"  alt="phone" style="margin-right:10px">Phone Number <br>  {{phone_two}}
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row no-padding class="phonerow">
+        <ion-col no-padding class="phonerow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+            <img src="assets/imgs/phone-icon.png"  alt="phone" style="margin-right:10px">Phone Number <br>  {{phone_three}}
+          </div>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row no-padding class="phonerow">
+        <ion-col no-padding class="phonerow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+            <img src="assets/imgs/mail-icon.png"  alt="phone" style="margin-right:10px">E-mail <br>  {{email_one}}
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row no-padding class="phonerow">
+        <ion-col no-padding class="phonerow" style="background-color:transparent ; color: white ; font-size: 16px" >
+          <div class="phoneImg" >
+            <img src="assets/imgs/mail-icon.png"  alt="phone" style="margin-right:10px">E-mail <br>  dhandhariacp@gmail.com
+          </div>
+          
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+
+    <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+      Developed By <br><a href="http://www.webcandypro.com/" target="_blank">http://www.webcandypro.com/</a>
+    </div>
+</ion-content>

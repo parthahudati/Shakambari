@@ -1,0 +1,100 @@
+page-main {
+
+
+    .topImage{
+        height: 200px;
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .secondImage{
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 7px;
+    }
+    ion-col{
+        height: 140px;
+    }
+    ion-list{
+        background: red;
+    }
+
+    .myButton{
+        background-color: rgb(148, 106, 106);
+    }
+    ion-item{
+        padding-bottom: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    ion-list{
+        padding-bottom: 0px !important;
+        margin-bottom: 0px !important;
+    }
+   .centerText{
+        text-align: center;
+        vertical-align: middle;
+        line-height: 120px;
+        color: white ;
+        font-size: 16px;
+   }
+
+   
+    ion-slides{
+        
+    }
+    
+    .myvideo{
+        width: 100%;
+        height: 200px;
+    }
+
+    .phonerow{
+        height: 49px !important;
+    }
+    .addressrow{
+        height: 10% !important;
+        margin-bottom: 10px;
+    }
+    .phoneImg{
+        margin-left: 20px;
+    }
+    
+    .phoneDiv{
+        color: white;
+    }
+      
+    
+      .slide-title {
+        margin-top: 2.8rem;
+        color: white;
+      }
+    
+      .slide-image {
+       height: 100px;
+       width: 100px;
+      }
+    
+      b {
+        font-weight: 500;
+      }
+    
+      p {
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #60646B;
+    
+        b {
+          color: #000000;
+        }
+      }
+    
+      .centerrow{
+        align-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+}

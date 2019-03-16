@@ -1,0 +1,71 @@
+<!--
+  Generated template for the HowToReachPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title>How To Reach</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-image:url('assets/imgs/dharma_bg.jpg')">
+
+  
+  <div >
+    <ion-segment [(ngModel)]="howToReach">
+      <ion-segment-button value="air">
+        Delhi To Sakrai
+      </ion-segment-button>
+      <ion-segment-button value="train">
+        Jaipur To Sakrai
+      </ion-segment-button>
+      
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="howToReach">
+    <div *ngSwitchCase="'air'" padding>
+    <h2 >Delhi To Sakrai - 267 Kms</h2>  
+    <hr>
+    Way to the Temple via Gurgaon - Manesar - Dharuhera - Shahjahnpur Road - Bahror - Kotputli - Patan - Neem Ka Thana - Challa - Guhala - Udaipurwati - Shakambhari Mandir
+    </div>
+  
+    <div *ngSwitchCase="'train'" padding>
+      <h3>Route 1</h3>
+      <hr>
+      <p>Way to the Temple via Chomun - Ringas - Palsana - Khandela - Udaipurwati - Shakambhari Mandir 140 Kms</p>
+      <h3>Route 2</h3>
+      <hr>
+      <p>Way to the Temple via Chomun - Ringas - Palsana - Ranoli - Goria - Sikar 170 Kms</p>
+      <h3>Route 3</h3>
+      <hr>
+      <p>Way to the Temple via Chomun - Ringas - Palsana - Ranoli - Goria - Right turn to Shakambhari Mandir 115 Kms
+
+        The road
+        is not for Udaypur, this is very beautiful road and the hills is cut out to make way. The route is very very convenient but is not safe in the night.</p>
+      <h3>Route 4</h3>
+      <hr>
+      <p>From Udaipurwati To Shakambhari Mandir 15 Kms</p>
+      
+    </div>
+
+    
+  </div>
+
+  <h2>Easy transportation is available from Delhi, Jaipur, Sikar etc via bus route.
+  </h2>
+<hr>
+
+  <img src="assets/imgs/map.png" alt="map">
+  <br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.7395009001337!2d75.40538022919311!3d27.625817298926634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396cc6c602032f7f%3A0x943befdcae11e40f!2sSri+Shakambhari+Mata+Mandir!5e0!3m2!1sen!2sin!4v1523616354730" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  <div align="center" margin-top margin-bottom style="color:#F8BBD0">
+      SHAKAMBARI PARIWAR ® <br><a href="www.shamambarimata.com" target="_blank">www.shamambarimata.com</a>
+    </div>
+</ion-content>
